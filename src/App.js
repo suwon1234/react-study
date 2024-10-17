@@ -1,23 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+
+import FoodContainer from './docs/map/basic/FoodContainer';
+;
+import Sound from './docs/state/basic/Sound';
+// import Jsx02 from './docs/components/Jsx02';
+// import Jsx01, {Jsx02,Jsx03} from './docs/components/Jsx01';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+  
+ 
+      <FoodContainer/>
     </div>
   );
 }
