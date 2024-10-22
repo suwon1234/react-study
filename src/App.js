@@ -1,17 +1,12 @@
 import './App.css';
-
-import FoodContainer from './docs/map/basic/FoodContainer';
-;
-import Sound from './docs/state/basic/Sound';
-// import Jsx02 from './docs/components/Jsx02';
-// import Jsx01, {Jsx02,Jsx03} from './docs/components/Jsx01';
+import Check from './docs/ref/Check';
+import Name from './docs/ref/Name'
 
 function App() {
   return (
     <div>
-  
- 
-      <FoodContainer/>
+      {<Check/>}
+
     </div>
   );
 }
