@@ -5,6 +5,7 @@ import React, { useRef, useState } from 'react';
 const FoodContainer = () => {
   const [foods, setFoods] = useState([]);
   const inputRef = useRef([]);
+  const checkRef=useRef([])
   
   const onClickToAddFood = () => {
       setFoods(
@@ -14,19 +15,18 @@ const FoodContainer = () => {
         })
       )
   }
-  const OnClickToDelete=()=>{
-    //삭제하는 로직을 만들기
+  const onClickToDelete = () => {
+    const newfood=foods.filter((_,i)=> !checkRef.current[i].checked)
+    setFoods(newfood)
+  };
 
-  }
-
-  const foodList = foods.map(({kor, eng}) => {
-    return (
-      <li>
-        <input type="checkbox"/>
-        {`${kor}(${eng})`}
-      </li>
-    )
-  })
+  // 음식 목록을 표시하는 부분
+  const foodList = foods.map(({ kor, eng }, i) => (
+    <li key={i}>
+      <input ref={(el) => (checkRef.current[i] = el)} type="checkbox" />
+      {`${kor} (${eng})`}
+    </li>
+  ));
 
   return (
     <div>
@@ -36,7 +36,7 @@ const FoodContainer = () => {
       </div>
       <div>
         <button onClick={onClickToAddFood}>추가</button>
-        <button onClick={OnClickToDelete}>삭제</button>
+        <button onClick={onClickToDelete}>삭제</button>
       </div>
       <div>
         {foodList}
