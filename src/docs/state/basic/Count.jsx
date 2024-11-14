@@ -1,17 +1,18 @@
 import React, { useState } from 'react';
 
 const Count = () => {
+  
+  const [number, setNumber] = useState(10);
 
-  const [number,setNumber] = useState(10);
-  const decrease =()=>{
+  const decrease = () => {
     console.log(number)
-    setNumber(number-1)
-
+    setNumber(number - 1)
   }
-  const increase =()=>{
-    setNumber(number+1)
-
+  const increase = () => {
+    console.log(number)
+    setNumber(number + 1)
   }
+
   return (
     <div>
       <button onClick={decrease}>-1 감소</button>

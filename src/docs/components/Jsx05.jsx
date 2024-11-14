@@ -14,14 +14,14 @@ const Jsx05 = () => {
   const isAdult = age >= 19;
   const isEven = age % 2 == 0;
   
+  // 변수들을 컴포넌트로 변경하기
   const passComponent = <div>{pass}</div>;
-  // 변수들을 컨포넌트로 변경하기
-  const notPassComponent = <div>{notPass}</div>
-  const luckyComponent = <div>{lucky}</div>
-  const unluckComponent = <div>{unLucky}</div>
+  const notPassComponent = <div>{notPass}</div>;
+  const luckyComponent = <div>{lucky}</div>;
+  const unLuckyComponent = <div>{unLucky}</div>;
 
-  const enter = isAdult ? passComponent : notPass;
-  const win = isEven ? lucky : unLucky;
+  const enter = isAdult ? passComponent : notPassComponent;
+  const win = isEven ? luckyComponent : unLuckyComponent;
 
   return (
     <div>

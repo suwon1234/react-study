@@ -1,16 +1,20 @@
+import { ThemeProvider } from 'styled-components';
 import './App.css';
-import Check from './docs/ref/Check';
-import CheckInput from './docs/ref/CheckInput';
-import Checkbox from './docs/ref/export/Checkbox';
-import Foodcontainer from './docs/ref/export/Foodcontainer';
-import Name from './docs/ref/Name'
+import { RouterProvider } from 'react-router-dom';
+import router from './routes/router';
 
-function App() {
+
+
+function App(theme) {
   return (
-    <div>
-      {<Foodcontainer/>}
-
-    </div>
+    <>
+  
+     <ThemeProvider theme={theme}>
+        <globalStyle />
+        <RouterProvider router={router}/>
+      </ThemeProvider>
+     
+    </>
   );
 }
 

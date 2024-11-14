@@ -1,15 +1,18 @@
-// Jsx 언어의 스타일은 밑에 나오는것과 같이 나타낼 수 있다.
+// 실습
+// name과 message를 넣어서 랜더링하기
+// name : 이름, message : 환영합니다.
+// 5분
 
+const Jsx03 = () => {
+  const name = "김세환";
+  const message = "환영합니다 😋";
 
-export default function Jsx01() {
-  const name= "박성진";
-  const message = "환영합니다"
-  
-  return(
-    <div>
-      {name}님 {message}
+  return (
+    <>
+      저의 이름은 {name} <br />
       <p style={{color : "red"}}>{message}</p>
-    </div>
-
+    </>
   )
 }
+
+export default Jsx03;
